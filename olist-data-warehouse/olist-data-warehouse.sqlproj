@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="2.2.0" />
+  <PropertyGroup>
+    <Name>olist-data-warehouse</Name>
+    <ProjectGuid>{31CFFE4C-A2F9-4B56-974A-CB8EF099D55A}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".vscode\tasks.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dbo\model" />
+    <Folder Include="dbo\notebooks" />
+    <Folder Include="dbo\sql" />
+    <Folder Include="dbo\sql\indexes" />
+    <Folder Include="dbo\sql\views" />
+    <Folder Include="dbo\tables" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>

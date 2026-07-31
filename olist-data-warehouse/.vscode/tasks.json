@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "sqlproj: Build olist-data-warehouse",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/home/bruce/olist-data-warehouse/olist-data-warehouse/olist-data-warehouse.sqlproj"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Builds the olist-data-warehouse SQL project"
+		}
+	]
+}
